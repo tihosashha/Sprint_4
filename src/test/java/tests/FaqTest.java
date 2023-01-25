@@ -20,12 +20,12 @@ public class FaqTest {
     }
 
     @Test
-    public void testFaqExpansion() {
+    public void testFaqExpansion() throws InterruptedException {
         MainPage mainPage = new MainPage(driver);
         driver.get("https://qa-scooter.praktikum-services.ru/");
 
         mainPage.scrollToFaq();
-        mainPage.clickItemsInFaq();
+        mainPage.clickAndCheckItemsInFaq();
     }
 
     @After
